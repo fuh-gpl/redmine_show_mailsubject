@@ -1,4 +1,4 @@
 <tr>
   <th class='duration'><%= l(:email_subject)  %>:</th>
-  <td colspan="3" class='duration'>[<%= issue.project.name %> - <%= issue.tracker.name %> #<%= issue.id %>] (<%= issue.status.name %>) <%= issue.subject %></td>
+  <td colspan="3" class='duration'><%= mail_to(nil, "[#{issue.project.name} - #{issue.tracker.name} ##{issue.id}] #{issue.subject}", :subject => "[#{issue.project.name} - #{issue.tracker.name} ##{issue.id}] #{issue.subject}" ) %></td>
 </tr>
